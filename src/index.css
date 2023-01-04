@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: "Inter var";
+    src: url("./assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf");
+}
+
+@font-face {
+    font-family: "B612 Mono Italic";
+    src: url("./assets/fonts/B612_Mono/B612Mono-Italic.ttf");
+}
+
+@layer base {
+    html {
+        font-size: 16px;
+    }
+    html, body, #root, #app-root, #dashboard {
+        @apply min-h-screen;
+    }
+}
+
+@layer components {
+    #dashboard {
+        @apply 
+            bg-neutral-200 text-zinc-800 
+            dark:bg-zinc-800 dark:text-neutral-300;
+    }
+
+    #dashboard:first-child {
+        @apply columns-1 sm:columns-2 lg:columns-3 xl:columns-4 2xl:columns-5 p-8 gap-8;
+    }
+
+    .job-card {
+        @apply 
+            break-inside-avoid mb-8 px-4 py-2
+            shadow rounded-xl
+            bg-white
+            dark:bg-zinc-900;
+    }
+
+    .job-card__section {
+        @apply text-base flex flex-row my-2;
+    }
+
+    .job-card__header {
+        @apply mb-1;
+    }
+
+    .job-card .icon {
+        @apply text-blue-500 dark:text-blue-700;
+    }
+
+    .job-card__header .icon {
+        @apply text-lg leading-tight text-amber-500 dark:text-amber-700;
+    }
+
+    .rego {
+        @apply uppercase font-mono font-normal;
+    }
+
+    p {
+        @apply text-sm text-zinc-500;
+    }
+
+    h2 {
+        @apply text-xl leading-tight;
+    }
+
+    h2 span {
+        @apply block text-sm leading-snug;
+    }
+
+    h3 {
+        @apply text-sm;
+    }
+
+    h3 .label {
+        @apply block text-xxs uppercase italic leading-snug text-zinc-400 dark:text-zinc-500;
+    }
+}

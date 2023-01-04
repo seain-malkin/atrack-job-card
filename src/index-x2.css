@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .chip-group {
+    @apply flex flex-row flex-wrap gap-2 p-4 text-xs capitalize leading-tight;
+  }
+
+  .chip {
+    @apply rounded-lg px-3 py-1;
+  }
+
+  .chip.blue {
+    @apply bg-sky-200 text-sky-700 dark:bg-sky-900 dark:text-sky-300;
+  }
+
+  .chip.indigo {
+    @apply bg-indigo-200 text-indigo-700 dark:bg-indigo-900 dark:text-indigo-200;
+  }
+
+  .chip.green {
+    @apply bg-emerald-200 text-emerald-700 dark:bg-emerald-900 dark:text-emerald-200;
+  }
+
+  .chip.orange {
+    @apply bg-orange-200 text-orange-700 dark:bg-orange-900 dark:text-orange-300;
+  }
+}
+
+@font-face {
+  font-family: "Inter var";
+  src: url("./assets/fonts/inter/Inter-VariableFont_slnt,wght.ttf");
+}
